@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the accompanying manuscript when using this implementation. Update author and publication metadata before the author release."
+title: "StageFairRec: Stage-wise Fair Representation Learning"
+authors:
+  - name: "StageFairRec contributors"
+type: software
+version: 0.1.0
+license: MIT
+abstract: "Paper-based reconstruction of Mitigating Sensitive Attribute Leakage in LLM-Enhanced Course Recommendation via Stage-wise Fair Representation Learning."
