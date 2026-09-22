@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stagefairrec"
+version = "0.1.0"
+description = "Paper-based implementation of stage-wise fair representation learning for course recommendation"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2,<3", "numpy>=1.24,<3", "scikit-learn>=1.3,<2"]
+
+[project.optional-dependencies]
+llm = ["transformers>=4.45,<5", "peft>=0.13,<1", "accelerate>=0.34,<2", "sentencepiece>=0.2"]
+attack = ["xgboost>=2,<4"]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+stagefairrec = "stagefairrec.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["stagefairrec*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
