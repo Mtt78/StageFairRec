@@ -3,13 +3,6 @@
 Paper-based PyTorch implementation of **Mitigating Sensitive Attribute Leakage in
 LLM-Enhanced Course Recommendation via Stage-wise Fair Representation Learning**.
 
-**Status:** this repository reconstructs the method from the supplied manuscript.
-It is not the original experiment repository, and does not claim to reproduce the
-reported numbers. No real learner data, pretrained LLM weights, or paper-result
-checkpoints are distributed. See [implementation decisions](docs/IMPLEMENTATION.md)
-for every material assumption and [validation](docs/VALIDATION.md) for tests run.
-
-[中文说明](README_zh.md) · [Data format](docs/DATA.md) · [Experiments](docs/EXPERIMENTS.md)
 
 ## What is implemented
 
@@ -144,8 +137,7 @@ to the scoring function.
 
 ## Resource considerations
 
-The manuscript uses a 7B LLM and an RTX 4090. This reconstruction does not guarantee
-that every encoder/configuration fits a 24 GB GPU. The learner LLM uses LoRA and
+The manuscript uses a 7B LLM and an RTX 4090. The learner LLM uses LoRA and
 optional gradient checkpointing, with a default source microbatch of 2. Course
 features are frozen. Float32 prefix caches can be large: two caches of N states
 and d_s features require about `2 * N * d_s * 4` bytes, excluding course features.
