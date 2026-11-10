@@ -57,18 +57,11 @@ stagefairrec train --data data/prepared --config configs/default.json \
 
 ## Inference
 
-Recommend from an existing cached prediction state using its integer row index in
-`rows.npy`. This ranks the full catalog, separately from paper sampled evaluation:
-
 ```bash
 stagefairrec recommend --data data/prepared --checkpoint runs/sasrec/full/best.pt \
   --semantics cache/sequential --row 11 --k 10 --exclude-seen \
   --out runs/sasrec/full/recommendations.json
 ```
-
-A new history requires fresh semantic encoding; this CLI does not implement a live
-serving API or cold-start learner registration. Sensitive labels are not supplied
-to the scoring function.
 
 ## Release and attribution
 
