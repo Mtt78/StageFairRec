@@ -12,20 +12,6 @@ python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -e '.[dev]'
 ```
 
-The PyTorch command above is for the CPU demonstration. For GPU training use a
-CUDA-compatible build from [PyTorch](https://pytorch.org/get-started/locally/).
-For real LLM encoders and all attack classifiers:
-
-```bash
-python -m pip install -e '.[llm,attack,dev]'
-```
-
-Dependency ranges are in `pyproject.toml`. Record your resolved environment with
-`python -m pip freeze > environment.txt` in each experiment archive. An example
-validated environment is included in `docs/VALIDATION.md`; ranges are not a promise
-that every future package version is compatible. No API key is required for local
-model encoding. Download the model separately if the training machine is offline.
-
 ## Quick CPU demonstration
 
 ```bash
