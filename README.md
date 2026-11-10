@@ -154,9 +154,4 @@ memory mapped; they are not all moved to GPU.
 
 ## Release and attribution
 
-The new implementation is released under the [MIT license](LICENSE); dataset and
-LLM licenses remain separate. `CITATION.cff` intentionally contains collective
-software authorship rather than invented manuscript bibliographic metadata.
-Before an author release, replace it with the confirmed author/venue/DOI details,
-verify the data preparation against your original experiments, and upload real
-results only after rerunning them. See [GitHub publication steps](docs/GITHUB.md).
+The new implementation is released under the [MIT license](LICENSE).
